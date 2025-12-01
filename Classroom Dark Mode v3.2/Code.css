@@ -497,6 +497,10 @@ body {
  border-right: 1px solid var(--border-header-nav);
 }
 
+.ygEKvf:not(:empty) {
+ padding-bottom: 1.5rem;
+}
+
 .TQYOZc { /* Додано скрол для завданнь курсу */
  overflow-y: auto;
 }
