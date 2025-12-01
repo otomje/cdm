@@ -1,4 +1,10 @@
-/* Classroom Dark Mode v3.0 */
+/* ==UserStyle==
+@name           CMD / Classroom Dark Mode
+@namespace      https://classroom.google.com
+@version        3.2.0
+@author         Me
+==/UserStyle== */
+/* Classroom Dark Mode v3.2 */
 /* Код створений для локального використовування. Забороняється продавати код. Код написаний розробником: "@otomje" */
 /* Для роботи скрипта потрібне розширення браузера > "Stylus" */
 /* Створено: 12/11/2025. Останнє оновлення: 1/12/2025 */
@@ -570,8 +576,8 @@ body {
 }
 
 .CHJgKd { /* Змінює розташування кнопки "Переглянути всі завдання" в курсі */
- text-align: center;
- margin: 6px 0;
+ text-align: left;
+ margin: 8px 0;
 }
 
 .RcHwO,
