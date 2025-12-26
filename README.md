@@ -1,4 +1,4 @@
-# CDM
+# CDM / Classroom Dark Mode
 A stylish, minimalist dark theme for **Google Classroom**.
 
 ## Installation
