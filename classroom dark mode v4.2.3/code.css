@@ -9,7 +9,7 @@
 /* Found a bug or want to ask something? Here are the contacts: Mail="d8315461@gmail.com" Telegram="@otomje" */
 /* Donate: send.monobank.ua/jar/3ACrruy1AZ */
 /* Version:
-   Update v4.2.3 16.01.2026  "Current version",
+   Update v4.2.3: 16.01.2026  "Current version",
    Update v4.2.2: 09.01.2026,
    Update v4.2.1: 04.01.2026,
    Update v4.2: 25.12.2025,
@@ -628,7 +628,8 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  padding: 0;
 }
 
-.B7SYid { /* Основний текст "Профіль" */
+.EfLcNb,
+.B7SYid { /* Основний текст */
  color: var(--color-1);
 }
 
@@ -644,7 +645,6 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  user-select: none;
 }
 
-.EfLcNb,
 .cSyPgb { /* 3-текст */
  color: var(--color-3);
 }
@@ -690,12 +690,12 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  background-image: none;
 }
 
-.Ccju8e, .T4tcpe { /* Текст фото - 1 */
- color: var(--color-2);
+.Ccju8e, .T4tcpe { /* Текст на фото - 1 */
+ color: var(--color-1);
 }
 
-.XbzULd {
- color: var(--color-3);
+.XbzULd { /* Текст на фото - 2 */
+ color: var(--color-2);
 }
 
 .qyN25, .OVu6ob, .T4tcpe { /* Робим текст по центру в фото курса */
@@ -846,8 +846,12 @@ button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-Bz112c-M1Soyc.mUIrbf-LgbsSe-OWXEXe-SfQ
  border: none;
 }
 
-.slDfNd, .slDfNd:visited, .U0QIdc, .U0QIdc:visited { /* Колір в вкладкі "Завдання" */
+.U0QIdc, .U0QIdc:visited { /* Колір в вкладкі "Завдання" */
  color: var(--color-1);
+}
+
+.slDfNd, .slDfNd:visited {
+ color: var(--color-3);
 }
 
 .KIdaEf { /* В вкладкі "Завданя" на блокі вимикаєм бордер */
