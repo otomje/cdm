@@ -9,19 +9,19 @@ A stylish, minimalist dark theme for **Google Classroom**.
 
 3. Done! You can now use it.
 
-## Update v4.2.3!
+## Update v4.2.4!
 
 What's new?
 
-1. A scrollbar has been added. Yes, it wasn’t visible before.
+1. Navigation button update.
 
-2. The message sending block has been updated.
+2. Separators added.
 
-3. Some rounded corners have been added and updated.
+3. Responsive layout added for different screen sizes.
 
-4. Now, the button to delete an uploaded file appears when you hover over the file.
+4. Some colors have been changed.
 
-5. Some colors have been updated.
+5. YouTube video playback player updated.
 
 6. Some bugs have been fixed.
 
