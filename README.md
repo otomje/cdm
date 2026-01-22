@@ -9,20 +9,20 @@ A stylish, minimalist dark theme for **Google Classroom**.
 
 3. Done! You can now use it.
 
-## Update v4.2.4!
+## Update v4.3.5!
 
 What's new?
 
-1. Navigation button update.
+1. Updated the left sidebar with elements. The sidebar will no longer shift sideways when in the hidden state.
 
-2. Separators added.
+2. Improved site responsiveness for different screen sizes.
 
-3. Responsive layout added for different screen sizes.
+3. The script has been optimized — most comments were removed.
 
-4. Some colors have been changed.
+4. Fixed visual artifacts.
 
-5. YouTube video playback player updated.
+5. Added and updated some colors.
 
-6. Some bugs have been fixed.
+6. Mini-fixes.
 
 My style will be updated until June 1, 2026. What happens after that will be decided later :)

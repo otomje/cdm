@@ -1,15 +1,16 @@
 /* ==UserStyle==
-@name           CDM / Classroom Dark Mode
+@name           CDM / Comments
 @namespace      https://github.com/otomje/cdm
-@description    Dark theme for Google Classroom
-@version        4.2.4
+@description    Dark Theme for Google Classroom
+@version        4.3.5
 @author         Otomje
 ==/UserStyle== */
 
 /* Found a bug or want to ask something? Here are the contacts: Mail="d8315461@gmail.com" Telegram="@otomje" */
 /* Donate: send.monobank.ua/jar/3ACrruy1AZ */
 /* Version:
-   Update v4.2.4: 19.01.2026  "Current version",
+   Update v4.3.5: 21.01.2026 "Current version",
+   Update v4.2.4: 19.01.2026,
    Update v4.2.3: 16.01.2026,
    Update v4.2.2: 09.01.2026,
    Update v4.2.1: 04.01.2026,
@@ -60,6 +61,14 @@
  --background-3-hover: rgb(52, 52, 54);
  --background-4-hover: rgb(57, 57, 59);
  --background-5-hover: rgb(62, 62, 64);
+ --course-color-1: rgb(60, 60, 65);
+ --course-color-2: rgb(60, 60, 65);
+ --course-color-3: rgb(60, 60, 65);
+ --course-color-4: rgb(60, 60, 65);
+ --course-color-5: rgb(60, 60, 65);
+ --course-color-6: rgb(60, 60, 65);
+ --course-color-7: rgb(60, 60, 65);
+ --course-color-8: rgb(60, 60, 65);
  --background-course: rgb(44, 44, 46);
  --background-course-hover: rgb(46, 46, 48);
  --border-course: transparent;
@@ -129,12 +138,12 @@
 
 /* ---------- Вимкнення функцій ---------- */
 
-.cuHavc, /* Лого ютуба в плеєрі */
+.cuHavc, /* Лого ютуба в плеєрі, youtube logo for player */
+.iiXQEd, /* Кнопка "?" в плеєрі, button "?" for player */
+.PNzAWd, /* Лого викладача, teacher logo */
+.N6nSod, /* Кнопка "?", button "?" */
 .OmA97e, /* В архівованих та прихованих блоках, є курси чії фотографії вилазять за межі */
-.PNzAWd, /* Аватарки на курсах */
-.ZYus1c,/* Заокруглення svg */
-.iiXQEd, /* Кнопка "?" в плеєрі */
-.N6nSod { /* Кнопка "?" */
+.ZYus1c { /* Заокруглення svg */
  display: none;
 }
 
@@ -214,6 +223,11 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
 .hN1OOc.eumXzf { /* Активний текст-кнопка в наве */
  color: var(--color-2);
  background: var(--none) !important;
+ transition: background .08s linear;
+}
+
+.xHPsid .hN1OOc:focus-visible {
+ background: var(--background-2) !important;
 }
 
 .hN1OOc.eumXzf::after { /* Полоска под текстом в наве */
@@ -240,6 +254,15 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
  background: var(--left-bar);
 }
 
+.F4Ol1b:not(.eXqTtb) .yWU57c:hover, .F4Ol1b:not(.eXqTtb) .yWU57c:focus-within { /* При вимкненому лівому барі, не буде анімації відкриття <Beta> */
+ width: 4.75rem; 
+ transition: none;
+}
+
+.F4Ol1b .yWU57c .uTwgne:not(.TbJ0Pc) { /* Якщо лівий бар вимкнений, і вимкнуті "Мої курси" то скриватися іконки курсів не будуть */
+ height: 48px;
+}
+
 .OkLq5b { /* Заокрулення лівого бару та хеадера */
  fill: var(--rounding-fill);
 }
@@ -252,7 +275,7 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
  border-radius: 16px;
 }
 
-.dNKuRb { /* Вимкнення бісячої обводки на кнопкі в лівому барі */
+.dNKuRb { /* Вимкнення обводки на кнопкі в лівому барі */
  border: none;
  --jF0a9c: var(--none);
 }
@@ -266,16 +289,19 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
  background: var(--left-bar-button-active);
 }
 
-.uTwgne:hover .pzaVke, .ug8OTc:hover .pzaVke { /* Кнопка при наведенні в лівому барі */
+.uTwgne:hover .pzaVke, .ug8OTc:hover .pzaVke,
+.uTwgne:focus-visible .pzaVke, .ug8OTc:focus-visible .pzaVke { /* Кнопка при наведенні в лівому барі */
  background: var(--left-bar-button-hover);
  transition: background 50ms linear;
 }
 
 .F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .wQiG5d,
 .F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .pzaVke {  /* Розмір кружочка на лівому барі при скритті */
- top: .4rem;
+/*top: .4rem;
  right: 2.8rem;
- bottom: .4rem;
+ bottom: .4rem;*/
+ top: 0;
+ bottom: 0;
 }
 
 .Ij01W { /* Відстань від тексту к лого в кнопці лівого бару */
@@ -310,6 +336,69 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
 .NMm5M { /* Колір іконки при активній кнопкі в лівому барі */
  fill: var(--color-2);
  color: var(--color-2);
+}
+
+/* -- Колір курсів в лівому барі -- */
+
+/*
+.Ag4wUb.CNpREd.bFjUmb-Ysl7Fe, .Ag4wUb.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-1);
+}
+
+.WFUiUb.CNpREd.bFjUmb-Ysl7Fe, .WFUiUb.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-2);
+}
+
+.zvzLKc.CNpREd.bFjUmb-Ysl7Fe, .zvzLKc.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-3);
+}
+
+.g2MItd.CNpREd.bFjUmb-Ysl7Fe, .g2MItd.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-4);
+}
+
+.S3aLQd.CNpREd.bFjUmb-Ysl7Fe, .S3aLQd.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-5);
+}
+
+.Mupove.CNpREd.bFjUmb-Ysl7Fe, .Mupove.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-6);
+}
+
+.ee1HBc.CNpREd.bFjUmb-Ysl7Fe, .ee1HBc.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-7);
+}
+
+.UvHKof.CNpREd.bFjUmb-Ysl7Fe, .UvHKof.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-8);
+}
+
+.Ag4wUb.CNpREd.xE2ejc, .Ag4wUb.CNpREd .xE2ejc,
+.WFUiUb.CNpREd.xE2ejc, .WFUiUb.CNpREd .xE2ejc,
+.zvzLKc.CNpREd.xE2ejc, .zvzLKc.CNpREd .xE2ejc,
+.g2MItd.CNpREd.xE2ejc, .g2MItd.CNpREd .xE2ejc,
+.S3aLQd.CNpREd.xE2ejc, .S3aLQd.CNpREd .xE2ejc,
+.Mupove.CNpREd.xE2ejc, .Mupove.CNpREd .xE2ejc,
+.ee1HBc.CNpREd.xE2ejc, .ee1HBc.CNpREd .xE2ejc,
+.UvHKof.CNpREd.xE2ejc, .UvHKof.CNpREd .xE2ejc {
+ border-color: var(--background-5);
+}
+
+.Ag4wUb.CNpREd.VnOHwf-Tvm9db, .Ag4wUb.CNpREd .VnOHwf-Tvm9db,
+.WFUiUb.CNpREd.VnOHwf-Tvm9db, .WFUiUb.CNpREd .VnOHwf-Tvm9db,
+.zvzLKc.CNpREd.VnOHwf-Tvm9db, .zvzLKc.CNpREd .VnOHwf-Tvm9db,
+.g2MItd.CNpREd.VnOHwf-Tvm9db, .g2MItd.CNpREd .VnOHwf-Tvm9db,
+.S3aLQd.CNpREd.VnOHwf-Tvm9db, .S3aLQd.CNpREd .VnOHwf-Tvm9db,
+.Mupove.CNpREd.VnOHwf-Tvm9db, .Mupove.CNpREd .VnOHwf-Tvm9db,
+.ee1HBc.CNpREd.VnOHwf-Tvm9db, .ee1HBc.CNpREd .VnOHwf-Tvm9db,
+.UvHKof.CNpREd.VnOHwf-Tvm9db, .UvHKof.CNpREd .VnOHwf-Tvm9db {
+ color: var(--color-2);
+ fill: var(--color-2);
+}
+*/
+
+.uW2Fw-Sx9Kwc-OWXEXe-s2gQvd .uW2Fw-T0kwCb, .uW2Fw-Sx9Kwc-XuHpsb-clz4Ic-yePe5c .uW2Fw-T0kwCb {
+ border: none !important;
 }
 
 .gb_Ha svg { /* 9 точок гугл іконка */
@@ -372,7 +461,8 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 }
 
 .KV3Lre { /* Кнопка "Показати приховані курси" по центру */
- margin-bottom: 10px;
+ padding: 0 1.5rem 1.5rem 1.5rem;
+ margin: 0;
 }
 
 /* -- Шкала загрузки сайта -- */
@@ -401,7 +491,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 }
 
 .ygEKvf:not(:empty) { /* Додаємо відступи в "Приховані курси" */
- margin: 1.5rem 0;
+ margin: 1.5rem 0 0;
 }
 
 .VjRxGc { /* Текст якщо нема курсів */
@@ -415,25 +505,41 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 /* -- Блок с курсами -- */
 
 @media (max-width: 1042px) { /* Якщо достига максимальної ширини то курси стають по центрі */
+.ygEKvf,
 .avfKs {
  justify-content: center;
+}
+
+.KV3Lre {
+ display: flex;
+ align-items: center;
+}
+
+.VfPpkd-dgl2Hf-ppHlrf-sM5MNb,
+.VfPpkd-dgl2Hf-ppHlrf-sM5MNb button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf {
+ width: 100%;
 }}
+
+.TisIWb .kKn9Nc::before { /* Задній фон курса, при переміщенні */
+ background: var(--background-course);
+}
 
 .riU7le { /* Курс <Bug> */
  border: 1px solid var(--border-course);
  background: var(--background-course);
  transition: background 80ms linear;
- cursor: default !important;
+ cursor: default;
 }
 
-.riU7le:hover { /* Курс ховер */
+.riU7le:hover,
+.riU7le:focus-within { /* Курс ховер */
  background: var(--background-course-hover);
 }
 
-.gHz6xd { /* Адаптивне налаштування під екрани <Beta> */
+.gHz6xd { /* Адаптивне налаштування курсів під екрани <Beta> */
  flex: 1;
  min-width: 18rem;
- max-width: 19rem;
+ max-width: 19.5rem;
 }
 
 .rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus { /* Курс ховер 2 */
@@ -480,7 +586,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 
 .ScpeUc { /* Маргин текста-1 в верхній частині курсу */
  margin-bottom: .1rem;
-}.ii7kld:not(.xp2dJ):focus-within,
+}
 
 .XwD7Ke { /* Текст-1 в верхній частині курсу */
  font-size: 1.3rem;
@@ -556,9 +662,12 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  font-size: 1.4rem;
 }
 
-
 .tB5Jxf-xl07Ob-XxIAqe { /* Цвет фону мини календаря */
  background: var(--background-3);
+}
+
+.dYwBL:focus-visible { /* Фокус на завдання в календарі */
+ outline: 1px solid;
 }
 
 .Fq0g7-HhDot-tJHJj { /* Колір днів тижня */
@@ -617,7 +726,8 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  transition: background 80ms linear;
 }
 
-.MHxtic:hover { /* Завдання при ховері */
+.MHxtic:hover,
+.MHxtic:focus-within { /* Завдання при ховері */
  background: var(--background-2);
  padding-left: 1.5rem;
  padding-right: 1.5rem;
@@ -724,7 +834,6 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 .aqdrmf-rymPhb-KkROqb:has(.aqdrmf-rymPhb-hIkGtc) img { /* Білий фон ззаді фотографії <Bug> */
  background: var(--background-2);
 }
-
 
 /* ---------- В середині курсу "Сторінка" ---------- */
 
@@ -934,7 +1043,9 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-Bz112c-M1Soyc.UywwFc-LgbsSe-OWXEXe-dgl
  background: var(--background-2) !important;
 }
 
-.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:hover { /* Кнопка яка веде на завдання "ховер" */
+.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:hover,
+.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:active,
+.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:focus-within { /* Кнопка яка веде на завдання "ховер" */
  background: var(--background-3) !important;
 }
 
@@ -1233,7 +1344,9 @@ button.FOBRw-LgbsSe.FOBRw-LgbsSe-OWXEXe-Bz112c-M1Soyc.FOBRw-LgbsSe-OWXEXe-dgl2Hf
  background: var(--file);
 }
 
-.FHXi2c:hover { /* Фон завдання ховер */
+.FHXi2c:hover,
+.FHXi2c:active,
+.FHXi2c:focus-within { /* Фон завдання ховер */
  background: var(--file-hover);
 }
 
@@ -1438,6 +1551,15 @@ button.oOPNbc-LgbsSe.oOPNbc-LgbsSe-OWXEXe-Bz112c-M1Soyc.oOPNbc-LgbsSe-OWXEXe-dgl
  color: var(--color-2);
 }
 
+.yLfx3d {
+ border-radius: 0 !important;
+}
+
+.yLfx3d:focus-visible,
+.rHGeGc-OkbHre-Woal0c-RWgCYc:focus-visible { /* Фокус контекстного меню */
+ background: var(--button-active);
+}
+
 .D3rBe { /* Правий бар */
  background: var(--background-1);
 }
@@ -1456,6 +1578,10 @@ button.oOPNbc-LgbsSe.oOPNbc-LgbsSe-OWXEXe-Bz112c-M1Soyc.oOPNbc-LgbsSe-OWXEXe-dgl
 
 .MknZlb { /* Бали за завдання */
  color: var(--color-2)
+}
+
+.LQzn7d .XpCIle {
+ background: var(--background-3);
 }
 
 /* --- Виставлення оцінок "Сторінка" ---*/
