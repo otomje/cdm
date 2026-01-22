@@ -515,8 +515,8 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  align-items: center;
 }
 
-.VfPpkd-dgl2Hf-ppHlrf-sM5MNb,
-.VfPpkd-dgl2Hf-ppHlrf-sM5MNb button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf {
+.KV3Lre .VfPpkd-dgl2Hf-ppHlrf-sM5MNb,
+.KV3Lre .VfPpkd-dgl2Hf-ppHlrf-sM5MNb button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf {
  width: 100%;
 }}
 
@@ -843,6 +843,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 
 .PFLqgc {
  opacity: .5;
+ background-position: center;
 }
 
 .ra2NV {
@@ -890,13 +891,15 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 }
 
 .VKARh {
- bottom: 1rem;
+ bottom: .8rem;
+ right: .8rem;
 }
 
 .eZZqMb.eZZqMb {
- top: unset;
- right: 3.5rem;
- bottom: .75rem;
+ top: auto;
+ right: 4rem;
+ bottom: .8rem;
+ margin: 0;
 }
 
 .OVu6ob .RcHwO {
@@ -927,7 +930,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  color: var(--color-3) !important;
 }
 
-button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-Bz112c-M1Soyc.mUIrbf-LgbsSe-OWXEXe-SfQLQb-suEOdc.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf, .YPA3Vb-LgbsSe {
+.wX4xVc-Bz112c-LgbsSe, button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-Bz112c-M1Soyc.mUIrbf-LgbsSe-OWXEXe-SfQLQb-suEOdc.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf, .YPA3Vb-LgbsSe {
  background: var(--background-3);
 }
 
