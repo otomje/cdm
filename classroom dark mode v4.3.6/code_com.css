@@ -47,8 +47,8 @@
  --nav: rgba(40, 40, 42, 1); /* 1 - .9 - blur on */
  --border-header-nav: rgb(40, 40, 42);
  --left-bar: rgba(40, 40, 42, 1); /* 1 - .9 - blur on */
- --left-bar-button-hover: rgb(46, 46, 50);
- --left-bar-button-active: rgb(50, 50, 54);
+ --left-bar-button-hover: rgb(46, 46, 48);
+ --left-bar-button-active: rgb(48, 48, 50);
  --rounding-fill: rgb(40, 40, 42);
  --button-hover: rgb(53, 53, 55);
  --button-active: rgb(56, 56, 58);
@@ -273,7 +273,7 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
 }
 
 .pzaVke, .uTwgne, .wQiG5d { /* Заокруглення кнопок в лівому барі */
- border-radius: 16px;
+ border-radius: 15px;
 }
 
 .dNKuRb { /* Вимкнення обводки на кнопкі в лівому барі */
@@ -293,7 +293,7 @@ body, .fXYYpf .T4LgNb, aBPWdf { /* Задній фон */
 .uTwgne:hover .pzaVke, .ug8OTc:hover .pzaVke,
 .uTwgne:focus-visible .pzaVke, .ug8OTc:focus-visible .pzaVke { /* Кнопка при наведенні в лівому барі */
  background: var(--left-bar-button-hover);
- transition: background 50ms linear;
+ transition: background .05s linear;
 }
 
 .F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .wQiG5d,
@@ -528,7 +528,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
 .riU7le { /* Курс <Bug> */
  border: 1px solid var(--border-course);
  background: var(--background-course);
- transition: background 80ms linear;
+ transition: background .08s linear;
  cursor: default;
 }
 
@@ -724,7 +724,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.Uyww
  padding-left: 1.5rem;
  padding-right: 1.5rem;
  border-radius: 10px;
- transition: background 80ms linear;
+ transition: background .08s linear;
 }
 
 .MHxtic:hover,
@@ -1043,7 +1043,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-Bz112c-M1Soyc.UywwFc-LgbsSe-OWXEXe-dgl
 .xo7QFd:focus-within,
 .wBE4bf { /* Кнопка яка веде на завдання */
  user-select: none;
- transition: background 70ms linear;
+ transition: background .07s linear;
  background: var(--background-2) !important;
 }
 
@@ -1081,7 +1081,7 @@ button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-Bz112c-M1Soyc.UywwFc-LgbsSe-OWXEXe-dgl
 
 .ii7kld:not(.xp2dJ) { /* Налаштовуєм блоки з завданнями */
  border-radius: .75rem .75rem 4px 4px !important;
- transition: background 70ms linear;
+ transition: background .07s linear;
 }
 
 /* .ii7kld:not(.xp2dJ):has(> :first-child:focus) {
