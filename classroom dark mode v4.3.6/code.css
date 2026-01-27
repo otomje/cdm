@@ -1,0 +1,1766 @@
+/* ==UserStyle==
+@name           CDM / Classroom Dark Mode
+@namespace      https://github.com/otomje/cdm
+@description    Dark Theme for Google Classroom
+@version        4.3.6
+@author         otomje
+==/UserStyle== */
+
+/* Found a bug or want to ask something? Here are the contacts: Mail="d8315461@gmail.com" Telegram="@otomje" */
+/* Donate: send.monobank.ua/jar/3ACrruy1AZ */
+/* Version:
+   Update v4.3.6: 26.01.2026 "Current version",
+   Update v4.3.5: 21.01.2026,
+   Update v4.2.4: 19.01.2026,
+   Update v4.2.3: 16.01.2026,
+   Update v4.2.2: 09.01.2026,
+   Update v4.2.1: 04.01.2026,
+   Update v4.2: 25.12.2025,
+   Update v4.1: 19.12.2025,
+   Update v4.0: 12.12.2025
+*/
+
+/* Create: 12.11.2025 */
+
+@-moz-document domain("classroom.google.com") {
+
+/* ---------- Root ---------- */
+
+:root {
+ --dbg: red;
+ --none: transparent;
+ --scrollbar-track: rgba(55, 55, 57, .0);
+ --scrollbar-thumb: rgb(75, 75, 77);
+ --scrollbar-thumb-hover: rgb(80, 80, 82);
+ --selection: rgb(100, 100, 180);
+ --selection-color: rgb(245, 245, 247);
+ --blur-1: blur(10px);
+ --blur-2: blur(20px);
+ --blur-3: blur(30px);
+ --blur-4: blur(40px);
+ --blur-5: blur(50px);
+ --w: white;
+ --r: red;
+ --g: green;
+ --b: black;
+ --header: rgba(40, 40, 42, 1); /* 1 - .9 - blur on */
+ --nav: rgba(40, 40, 42, 1); /* 1 - .9 - blur on */
+ --border-header-nav: rgb(40, 40, 42);
+ --left-bar: rgba(40, 40, 42, 1); /* 1 - .9 - blur on */
+ --left-bar-button-hover: rgb(46, 46, 50);
+ --left-bar-button-active: rgb(50, 50, 54);
+ --rounding-fill: rgb(40, 40, 42);
+ --button-hover: rgb(53, 53, 55);
+ --button-active: rgb(56, 56, 58);
+ --background-1: rgb(40, 40, 42);
+ --background-2: rgb(45, 45, 47);
+ --background-3: rgb(50, 50, 52);
+ --background-4: rgb(55, 55, 57);
+ --background-5: rgb(60, 60, 62);
+ --background-1-hover: rgb(42, 42, 44);
+ --background-2-hover: rgb(47 ,47, 49);
+ --background-3-hover: rgb(52, 52, 54);
+ --background-4-hover: rgb(57, 57, 59);
+ --background-5-hover: rgb(62, 62, 64);
+ --course-color-1: rgb(60, 60, 65);
+ --course-color-2: rgb(60, 60, 65);
+ --course-color-3: rgb(60, 60, 65);
+ --course-color-4: rgb(60, 60, 65);
+ --course-color-5: rgb(60, 60, 65);
+ --course-color-6: rgb(60, 60, 65);
+ --course-color-7: rgb(60, 60, 65);
+ --course-color-8: rgb(60, 60, 65);
+ --background-course: rgb(44, 44, 46);
+ --background-course-hover: rgb(46, 46, 48);
+ --border-course: transparent;
+ --file: rgb(50, 50, 52);
+ --file-hover: rgb(54, 54, 56);
+ --color-1: rgb(250, 250, 252);
+ --color-2: rgb(235, 235, 237);
+ --color-3: rgb(220, 220, 222);
+ --color-4: rgb(205, 205, 207);
+ --color-5: rgb(190, 190, 192);
+ --border-color: rgb(150, 150, 152);
+ --link: rgb(200, 200, 250);
+}
+
+/* *:hover {
+ outline: 1px solid var(--dbg);
+} */
+
+::selection {
+ color: var(--selection-color);
+ background-color: var(--selection);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Scrollbar off */
+.rknsod, .TQYOZc {
+  scrollbar-width: none;
+}
+
+.rknsod::-webkit-scrollbar,
+.TQYOZc::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scrollbar off all
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Arhive 
+::-webkit-scrollbar {
+ height: 6px;
+ width: 6px;
+}
+
+::-webkit-scrollbar-track {
+ background: var(--scrollbar-track);
+}
+
+::-webkit-scrollbar-thumb {
+ background: var(--scrollbar-thumb);
+ border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+ background: var(--scrollbar-thumb-hover);
+}
+*/
+
+/* ---------- Вимкнення функцій ---------- */
+
+.cuHavc, /* Лого ютуба в плеєрі, youtube logo for player */
+.iiXQEd, /* Кнопка "?" в плеєрі, button "?" for player */
+.PNzAWd, /* Лого викладача, teacher logo */
+.N6nSod, /* Кнопка "?", button "?" */
+.OmA97e, /* В архівованих та прихованих блоках, є курси чії фотографії вилазять за межі */
+.ZYus1c { /* Заокруглення svg */
+ display: none;
+}
+
+/* ---------- Основна "Сторінка" ---------- */
+
+* {
+--hSHBee: none;
+--kDWEsd: none;
+--Fe5l0b: none;
+--sbadab: var(--button-hover);
+--F1tVH: var(--button-active);
+}
+
+/*
+body {  Постійний скролл-бар щоб контент не "пригав" 
+ overflow-y: scroll;
+}
+*/
+
+img {
+ user-select: none;
+}
+
+a, .gXNsG, .gXNsG:visited, .gXNsG:hover, .gXNsG:focus, .j70YMc a:any-link, .Usp03c {
+ color: var(--link);
+ text-decoration: none;
+}
+
+input {
+ color: var(--color-2) !important;
+}
+
+input::placeholder {
+ color: var(--color-4) !important;
+}
+
+textarea {
+ color: var(--color2) !important;
+}
+
+textarea::placeholder {
+ color: var(--color-4) !important;
+}
+
+body, .fXYYpf .T4LgNb, aBPWdf {
+ background: var(--background-1);
+}
+
+.joJglb {
+ border-bottom: 1px solid var(--border-header-nav);
+ backdrop-filter: var(--blur-2);
+ background: var(--header);
+}
+
+.y183Ub {
+ color: var(--color-1);
+ user-select: none;
+}
+
+.slDfNd:hover, .slDfNd:focus, .CYP1kd:hover, .CYP1kd:focus, .U0QIdc:hover, .U0QIdc:focus,
+.uX1MEd:hover, .uX1MEd:focus, .HZlyCe:hover .uX1MEd, .HZlyCe:focus .uX1MEd {
+ color: var(--color-2);
+}
+
+.gycFA.gycFA {
+ color: var(--color-1);
+ user-select: none;
+}
+
+.mwJvDe .KEDCCd {
+ background: var(--nav);
+ backdrop-filter: var(--blur-2);
+ border-bottom: 1px solid var(--border-header-nav);
+}
+
+.LKmtKf, .S6Vdac,
+.hN1OOc.eumXzf {
+ color: var(--color-2);
+ background: var(--none) !important;
+ transition: background .08s linear;
+}
+
+.xHPsid .hN1OOc:focus-visible {
+ background: var(--background-2) !important;
+}
+
+.hN1OOc.eumXzf::after {
+ bottom: -.12rem;
+ border-top-width: .22rem;
+ border-radius: 999px;
+ border-color: var(--color-3);
+}
+
+.xHPsid {
+ user-select: none;
+}
+
+.xHPsid {
+ user-select: none;
+}
+
+.wZTANe .J1raN {
+ color: var(--color-3) !important;
+}
+
+.tCcYY {
+ backdrop-filter: var(--blur-2);
+ background: var(--left-bar);
+}
+
+.F4Ol1b:not(.eXqTtb) .yWU57c:hover, .F4Ol1b:not(.eXqTtb) .yWU57c:focus-within {
+ width: 4.75rem; 
+ transition: none;
+}
+
+.F4Ol1b .yWU57c .uTwgne:not(.TbJ0Pc) {
+ height: 48px;
+}
+
+.OkLq5b {
+ fill: var(--rounding-fill);
+}
+
+.F4Ol1b:not(.eXqTtb) .STek2d:hover, .F4Ol1b:not(.eXqTtb) .STek2d:focus-within {
+ box-shadow: none;
+}
+
+.pzaVke, .uTwgne, .wQiG5d {
+ border-radius: 16px;
+}
+
+.dNKuRb {
+ border: none;
+ --jF0a9c: var(--none);
+}
+
+.uTwgne, .ug8OTc {
+ padding-right: .5rem;
+ user-select: none;
+}
+
+.wQiG5d {
+ background: var(--left-bar-button-active);
+}
+
+.uTwgne:hover .pzaVke, .ug8OTc:hover .pzaVke,
+.uTwgne:focus-visible .pzaVke, .ug8OTc:focus-visible .pzaVke {
+ background: var(--left-bar-button-hover);
+ transition: background 50ms linear;
+}
+
+.F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .wQiG5d,
+.F4Ol1b .tCcYY.yWU57c:not(:hover):not(:focus-within) .pzaVke {
+/*top: .4rem;
+ right: 2.8rem;
+ bottom: .4rem;*/
+ top: 0;
+ bottom: 0;
+}
+
+.Ij01W {
+ margin-left: .4rem;
+}
+
+.HqpJve {
+ font-weight: 500;
+}
+
+.GRvzhf, .HqpJve {
+ color: var(--color-3);
+}
+
+.XL4gNd {
+ color: var(--color-2);
+}
+
+.DWJNgb {
+ color: var(--color-4);
+}
+
+.mefVYc {
+ color: var(--color-3);
+}
+
+.ykp8pd {
+ fill: var(--color-3);
+ color: var(--color-3);
+}
+
+.NMm5M {
+ fill: var(--color-2);
+ color: var(--color-2);
+}
+
+/* -- Колір курсів в лівому барі -- */
+
+/*
+.Ag4wUb.CNpREd.bFjUmb-Ysl7Fe, .Ag4wUb.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-1);
+}
+
+.WFUiUb.CNpREd.bFjUmb-Ysl7Fe, .WFUiUb.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-2);
+}
+
+.zvzLKc.CNpREd.bFjUmb-Ysl7Fe, .zvzLKc.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-3);
+}
+
+.g2MItd.CNpREd.bFjUmb-Ysl7Fe, .g2MItd.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-4);
+}
+
+.S3aLQd.CNpREd.bFjUmb-Ysl7Fe, .S3aLQd.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-5);
+}
+
+.Mupove.CNpREd.bFjUmb-Ysl7Fe, .Mupove.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-6);
+}
+
+.ee1HBc.CNpREd.bFjUmb-Ysl7Fe, .ee1HBc.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-7);
+}
+
+.UvHKof.CNpREd.bFjUmb-Ysl7Fe, .UvHKof.CNpREd .bFjUmb-Ysl7Fe {
+ background: var(--course-color-8);
+}
+
+.Ag4wUb.CNpREd.xE2ejc, .Ag4wUb.CNpREd .xE2ejc,
+.WFUiUb.CNpREd.xE2ejc, .WFUiUb.CNpREd .xE2ejc,
+.zvzLKc.CNpREd.xE2ejc, .zvzLKc.CNpREd .xE2ejc,
+.g2MItd.CNpREd.xE2ejc, .g2MItd.CNpREd .xE2ejc,
+.S3aLQd.CNpREd.xE2ejc, .S3aLQd.CNpREd .xE2ejc,
+.Mupove.CNpREd.xE2ejc, .Mupove.CNpREd .xE2ejc,
+.ee1HBc.CNpREd.xE2ejc, .ee1HBc.CNpREd .xE2ejc,
+.UvHKof.CNpREd.xE2ejc, .UvHKof.CNpREd .xE2ejc {
+ border-color: var(--background-5);
+}
+
+.Ag4wUb.CNpREd.VnOHwf-Tvm9db, .Ag4wUb.CNpREd .VnOHwf-Tvm9db,
+.WFUiUb.CNpREd.VnOHwf-Tvm9db, .WFUiUb.CNpREd .VnOHwf-Tvm9db,
+.zvzLKc.CNpREd.VnOHwf-Tvm9db, .zvzLKc.CNpREd .VnOHwf-Tvm9db,
+.g2MItd.CNpREd.VnOHwf-Tvm9db, .g2MItd.CNpREd .VnOHwf-Tvm9db,
+.S3aLQd.CNpREd.VnOHwf-Tvm9db, .S3aLQd.CNpREd .VnOHwf-Tvm9db,
+.Mupove.CNpREd.VnOHwf-Tvm9db, .Mupove.CNpREd .VnOHwf-Tvm9db,
+.ee1HBc.CNpREd.VnOHwf-Tvm9db, .ee1HBc.CNpREd .VnOHwf-Tvm9db,
+.UvHKof.CNpREd.VnOHwf-Tvm9db, .UvHKof.CNpREd .VnOHwf-Tvm9db {
+ color: var(--color-2);
+ fill: var(--color-2);
+}
+*/
+
+.uW2Fw-Sx9Kwc-OWXEXe-s2gQvd .uW2Fw-T0kwCb, .uW2Fw-Sx9Kwc-XuHpsb-clz4Ic-yePe5c .uW2Fw-T0kwCb {
+ border: none !important;
+}
+
+.gb_Ha svg {
+ fill: var(--color-2) !important;
+ color: var(--color-2) !important;
+}
+
+.gb_B:hover {
+ background: var(--background-3);
+}
+
+.gb_B:focus {
+ background: var(--background-4);
+}
+
+.sPaOEe, .Fgl6fe-fmcmS-MvKemf-OWXEXe-iJ4yB, .PETVs.PETVs-OWXEXe-UbuQg, .pYTkkf-Bz112c-LgbsSe, .pYTkkf-Bz112c-LgbsSe:hover, .pYTkkf-Bz112c-LgbsSe:active, .pYTkkf-Bz112c-LgbsSe:focus {
+ color: var(--color-2);
+ fill: var(--color-2);
+}
+
+.UywwFc-LgbsSe:disabled .UywwFc-vQzf8d,
+.mUIrbf-LgbsSe:disabled .mUIrbf-vQzf8d {
+ color: var(--color-5) !important;
+}
+
+.UywwFc-LgbsSe:disabled {
+ background: var(--none);
+}
+
+.qdOxv-fmcmS-yrriRe-OWXEXe-INsAgc:not(.qdOxv-fmcmS-yrriRe-OWXEXe-OWB6Me) {
+ --gm3-notched-outline-border-color: var(--color-5) !important;
+}
+
+button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.UywwFc-kSE8rc-FoKg4d-sLO9V-YoZ4jf {
+ background: var(--background-2);
+}
+
+.uW2Fw-Sx9Kwc-OWXEXe-vOE8Lb .uW2Fw-k2Wrsb {
+ color: var(--color-1);
+}
+
+.aqdrmf-rymPhb-Gtdoyb {
+ color: var(--color-2) !important;
+}
+
+.aqdrmf-rymPhb-ibnC6b.aqdrmf-rymPhb-ibnC6b-OWXEXe-OWB6Me :is(.aqdrmf-rymPhb-fpDzbe-fmcmS,.aqdrmf-rymPhb-bC5pod-fmcmS) {
+ opacity: 1 !important;
+}
+
+.XyFhbe.XyFhbe.XyFhbe .ysyGod {
+ color: var(--color-2) !important;
+}
+
+.qCWAqb, .aqdrmf-rymPhb-ibnC6b-OWXEXe-OWB6Me .aqdrmf-rymPhb-L8ivfd-fmcmS {
+ color: var(--color-2) !important;
+}
+
+.aqdrmf-clz4Ic {
+ background: var(--none);
+}
+
+.KV3Lre {
+ padding: 0 1.5rem 1.5rem 1.5rem;
+ margin: 0;
+}
+
+/* -- Шкала загрузки сайта -- */
+
+.Po14Kd {
+ background: var(--none);
+}
+
+.BWOvob {
+ background: var(--color-2);
+}
+
+.uKB7n {
+ stroke: var(--none);
+}
+
+.If7mAe {
+ stroke: var(--color-2);
+}
+
+.mUIrbf-vQzf8d,
+.mUIrbf-LgbsSe:hover .mUIrbf-vQzf8d,
+.mUIrbf-LgbsSe:active .mUIrbf-vQzf8d, 
+.mUIrbf-LgbsSe:focus .mUIrbf-vQzf8d {
+ color: var(--color-2);
+}
+
+.ygEKvf:not(:empty) {
+ margin: 1.5rem 0 0;
+}
+
+.VjRxGc {
+ color: var(--color-2);
+}
+
+.OIh3D.QRiHXd .AeBiU-LgbsSe.AeBiU-LgbsSe-OWXEXe-dgl2Hf.AeBiU-kSE8rc-FoKg4d-sLO9V-YoZ4jf {
+ background: var(--background-3);
+}
+
+/* -- Блок с курсами -- */
+
+@media (max-width: 1042px) {
+.ygEKvf,
+.avfKs {
+ justify-content: center;
+}
+
+.KV3Lre {
+ display: flex;
+ align-items: center;
+}
+
+.KV3Lre .VfPpkd-dgl2Hf-ppHlrf-sM5MNb,
+.KV3Lre .VfPpkd-dgl2Hf-ppHlrf-sM5MNb button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf {
+ width: 100%;
+}}
+
+.TisIWb .kKn9Nc::before {
+ background: var(--background-course);
+}
+
+.riU7le {
+ border: 1px solid var(--border-course);
+ background: var(--background-course);
+ transition: background 80ms linear;
+ cursor: default;
+}
+
+.riU7le:hover,
+.riU7le:focus-within {
+ background: var(--background-course-hover);
+}
+
+.gHz6xd {
+ flex: 1;
+ min-width: 18rem;
+ max-width: 19.5rem;
+}
+
+.rZXyy.YwNp1, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):hover, .rZXyy:not(.u0dx8e):not(.ILo0B):not(.xp2dJ):focus {
+ box-shadow: none;
+}
+
+.Tc9hUd {
+ min-height: 5.76rem;
+}
+
+.ZizeYd.qm64Ve {
+ opacity: .5;
+ background: var(--background-1);
+}
+
+.OjOEXb, .ZizeYd, .O7utsb, .ZmqAt {
+ border-radius: 4px;
+}
+
+.R4EiSb {
+ padding: .6rem 1rem .6rem;
+ gap: .2rem;
+}
+
+.PNzAWd {
+ left: 8px;
+ bottom: 8px;
+ height: 29px;
+ width: 29px;
+ float: none;
+ margin: 0;
+ position: absolute;
+ border: 3px solid var(--none);
+ transition: border-color .08s linear;
+}
+
+.PNzAWd:hover {
+ border-color: var(--button-hover);
+}
+
+.PNzAWd:active {
+ border-color: var(--button-active);
+}
+
+.ScpeUc {
+ margin-bottom: .1rem;
+}
+
+.XwD7Ke {
+ font-size: 1.3rem;
+ color: var(--color-1);
+ user-select: none;
+}
+
+.Svw0vd {
+ font-weight: 400;
+ color: var(--color-2);
+ user-select: none;
+}
+
+.T30lh {
+ font-size: .8rem;
+ color: var(--color-2);
+ user-select: none;
+}
+
+.T30lh {
+ text-decoration: none !important;
+ cursor: default;
+}
+
+.z07MGc, .z07MGc:visited, .z07MGc:hover, .z07MGc:focus {
+ color: var(--color-2);
+}
+
+.TQYOZc {
+ padding: 1rem 1rem 0;
+ overflow-y: auto;
+}
+
+.WZdtef {
+ color :var(--color-5);
+}
+
+.sdmSCf, .slDfNd.ARTZne {
+ color: var(--color-2);
+ user-select: none;
+}
+
+.SZ0kZe {
+ padding: .32rem;
+ border: none;
+}
+
+.hc3MGb, .hc3MGb:hover {
+ opacity: 1;
+}
+
+.N6nSod {
+ background: var(--background-3);
+}
+
+/* ---------- Календарь "Сторінка" ---------- */
+
+.RIDjNe {
+ border: none;
+}
+
+.Eajscb .vT1Gyc.F262Ye {
+ background: var(--background-4);
+}
+
+.Eajscb .nGZbac, .Eajscb .nGZbac.pCcXPe, .Eajscb .nGZbac.N4XV7d,
+.Eajscb .vT1Gyc {
+ color: var(--color-2) !important;
+ user-select: none;
+}
+
+.kGNarb {
+ font-size: 1.4rem;
+}
+
+.tB5Jxf-xl07Ob-XxIAqe {
+ background: var(--background-3);
+}
+
+.dYwBL:focus-visible {
+ outline: 1px solid;
+}
+
+.Fq0g7-HhDot-tJHJj {
+ color: var(--color-2);
+}
+
+/* -- Вибор курса "Кнопка" "Фільтри" -- */
+
+.rHGeGc-uusGie-fmcmS {
+ color: var(--color-2) !important;
+ user-select: none;
+}
+
+.rHGeGc-t08AT-Bz112c {
+ fill: var(--color-2) !important;
+}
+
+.w482V-CZC2Ab-i5vt6e {
+--gm3-notched-outline-border-color: var(--color-4) !important;
+}
+
+.aqdrmf-rymPhb-Gtdoyb, span.aqdrmf-rymPhb-KkROqb {
+ z-index: 2;
+ user-select: none;
+}
+
+.O68mGe-xl07Ob,
+.rHGeGc-YPmvEd {
+ user-select: none;
+ --gm3-menu-container-color: var(--background-3) !important;
+ --gm3-list-list-item-selected-container-color: var(--none) !important;
+ --gm3-list-list-item-label-text-color: var(--color-2) !important;
+ --gm3-list-list-item-hover-label-text-color: var(--color-2) !important;
+ --gm3-list-list-item-focus-label-text-color: var(--color-2) !important;
+ --gm3-list-list-item-selected-hover-label-text-color: var(--color-2) !important;
+ --gm3-list-list-item-selected-focus-label-text-color: var(--color-2) !important;
+}
+
+/* ---------- Завдання "Сторінка" ---------- */
+
+.Z3qXvc {
+ max-width: 50rem;
+}
+
+.WOPwXe {
+ font-size: 1.1rem;
+ user-select: none;
+}
+
+.MHxtic {
+ background: var(--none);
+ margin: 0;
+ padding-left: 1.5rem;
+ padding-right: 1.5rem;
+ border-radius: 10px;
+ transition: background 80ms linear;
+}
+
+.MHxtic:hover,
+.MHxtic:focus-within {
+ background: var(--background-2);
+ padding-left: 1.5rem;
+ padding-right: 1.5rem;
+ border-radius: 10px;
+}
+
+.ZnNi8e .u7S8tc {
+ display: flex;
+ flex-direction: column;
+ align-items: flex-end;
+}
+
+.WOPwXe {
+ color: var(--color-2);
+}
+
+.gJk24c, .I2pI {
+ color: var(--color-2);
+ user-select: none;
+}
+
+.dDKhVc {
+ color: var(--color-3) !important;
+}
+
+.MHxtic, .LKqFXc {
+ border: none !important;
+ box-shadow: none !important;
+ user-select: none;
+}
+
+.asQXV-FGzYL, .ksaOtd {
+ color: var(--color-2);
+}
+
+.udxSmc {
+ color: var(--color-3);
+}
+
+.NlSq7.dDKhVc {
+ text-align: center;
+ padding: 0 14px 0 5px;
+}
+
+/* ---------- Налаштування "Сторінка" ---------- */
+
+.Aopndd {
+ background: var(--background-2);
+ border: none;
+}
+
+.f2YrEb, .io4oZb {
+ margin: 0;
+ padding: 0;
+}
+
+.EfLcNb,
+.B7SYid {
+ color: var(--color-1);
+}
+
+.saYe1e,
+.tDxNLe,
+.tLDEHd,
+.asQXV {
+ color: var(--color-2);
+}
+
+.asQXV {
+ font-weight: 400;
+ user-select: none;
+}
+
+.cSyPgb {
+ color: var(--color-3);
+}
+
+.ViCi4 {
+ cursor: pointer;
+ color: var(--color-3);
+}
+
+.E5f6Vd, .vjb26b:not(.MJeJce) {
+ border: none;
+}
+
+.Elz9Mb {
+ user-select: none;
+}
+
+.eBlXUe-scr2fc-OWXEXe-gk6SMd .eBlXUe-l6JLsf,
+.eBlXUe-scr2fc-OWXEXe-gk6SMd:hover .eBlXUe-l6JLsf {
+ background: var(--background-5) !important;
+}
+
+.eBlXUe-l6JLsf::before {
+ border: none !important;
+}
+
+.eBlXUe-l6JLsf .UTNHae::before, .eBlXUe-l6JLsf .UTNHae::after {
+ background: var(--none) !important;
+}
+
+.aqdrmf-rymPhb-KkROqb:has(.aqdrmf-rymPhb-hIkGtc) img {
+ background: var(--background-2);
+}
+
+/* ---------- В середині курсу "Сторінка" ---------- */
+
+.Y0qupd .dbEQNc, .dbEQNc {
+ max-width: 65rem;
+}
+
+.PFLqgc {
+ opacity: .5;
+ background-position: center;
+}
+
+.ra2NV {
+ background-image: none;
+}
+
+.Ccju8e, .T4tcpe {
+ color: var(--color-1);
+}
+
+.XbzULd {
+ color: var(--color-2);
+}
+
+.qyN25, .OVu6ob, .T4tcpe {
+ padding: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ user-select: text;
+}
+
+.d4Fe0d {
+ border: none;
+ background: var(--background-2);
+}
+
+.Iwp0Ue:not(.xp2dJ):focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ):focus-within.h7Ww0, .Iwp0Ue:not(.xp2dJ) :focus-within.JiTjnd, .Iwp0Ue:not(.xp2dJ) :focus-within.h7Ww0, .xWw7yd:focus-within.JiTjnd, .xWw7yd:focus-within.h7Ww0, .xWw7yd :focus-within.JiTjnd, .xWw7yd :focus-within.h7Ww0,
+.Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover.h7Ww0, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .rXdid, .Iwp0Ue:not(.xp2dJ):not(.rZXyy):hover .h7Ww0, .xWw7yd:hover.rXdid, .xWw7yd:hover.h7Ww0, .xWw7yd:hover .rXdid, .xWw7yd:hover .h7Ww0{
+ background: var(--background-3);
+}
+
+.fHar6b, .RUkyfb, thead .vvqDLc,
+.go6aXd.xAKnLc, .fum4Tb.xAKnLc, tbody .vvqDLc.xAKnLc,
+.go6aXd, .fum4Tb, tbody .vvqDLc {
+ background: var(--background-2);
+}
+
+.lziZub, .lziZub:visited {
+ color: var(--color-2);
+}
+
+.qyN25 .VKARh button.pYTkkf-Bz112c-LgbsSe.pYTkkf-Bz112c-LgbsSe-OWXEXe-SfQLQb-suEOdc.takkMe {
+ background: var(--background-3);
+}
+
+.VKARh {
+ bottom: .8rem;
+ right: .8rem;
+}
+
+.eZZqMb.eZZqMb {
+ top: auto;
+ right: 4rem;
+ bottom: .8rem;
+ margin: 0;
+}
+
+.OVu6ob .RcHwO {
+ background: var(--none);
+}
+
+.AX2up, .mvRF3b {
+ user-select: none;
+ color: var(--color-2);
+}
+
+.AeBiU-LgbsSe.AeBiU-LgbsSe-OWXEXe-dgl2Hf.AeBiU-kSE8rc-FoKg4d-sLO9V-YoZ4jf.H0ANOe,
+.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf.uBUej {
+ width: 100%;
+ border: none !important;
+ background: var(--background-3);
+}
+
+.AeBiU-vQzf8d {
+ color: var(--color-2) !important;
+}
+
+.LXTxRc-AznF2e-OWXEXe-auswjd:not(:disabled) .LXTxRc-jY41G-V67aGc {
+ color: var(--color-2) !important;
+}
+
+.LXTxRc-AznF2e:not(.LXTxRc-AznF2e-OWXEXe-auswjd):not(:disabled) .LXTxRc-jY41G-V67aGc {
+ color: var(--color-3) !important;
+}
+
+.wX4xVc-Bz112c-LgbsSe, button.mUIrbf-LgbsSe.mUIrbf-LgbsSe-OWXEXe-Bz112c-M1Soyc.mUIrbf-LgbsSe-OWXEXe-SfQLQb-suEOdc.mUIrbf-LgbsSe-OWXEXe-dgl2Hf.mUIrbf-StrnGf-YYd4I-VtOx3e.mUIrbf-kSE8rc-FoKg4d-sLO9V-YoZ4jf, .YPA3Vb-LgbsSe {
+ background: var(--background-3);
+}
+
+.T4pcrc, .fliwXd-OWXEXe-V67aGc {
+ color: var(--color-2);
+}
+
+.KGC9Kd-muHVFf-bMcfAe:checked~.KGC9Kd-YQoJzd, .KGC9Kd-muHVFf-bMcfAe[aria-checked=mixed]~.KGC9Kd-YQoJzd {
+ background: var(--color-2) !important;
+}
+
+.KGC9Kd-YQoJzd {
+ border-color: var(--color-2) !important;
+}
+
+.KGC9Kd-muHVFf-bMcfAe:enabled~.KGC9Kd-YQoJzd .KGC9Kd-HUofsb {
+ color: var(--background-2) !important;
+}
+
+.t5tYqf .cmTiyd {
+ border-bottom: none;
+}
+
+.ex3A2d, .eAjxCd {
+ border-bottom: none;
+}
+
+.QV10Af, .cLpBac {
+ background: var(--background-2);
+ border: none;
+}
+
+.JAPqpe.K0NPx, .wsBckd, .Qs1TLd, .cF1l4b.cF1l4b.cF1l4b, .Kltjg.Kltjg.Kltjg {
+ background: var(--background-3);
+}
+
+.z80M1.FwR7Pc {
+ background: var(--background-4);
+}
+
+.ex3A2d {
+ border: none;
+}
+
+.mUIrbf-kBDsod-Rtc0Jf {
+ color: var(--color-2) !important;
+}
+
+.LNBrBd {
+ color: var(--color-2);
+}
+
+.WOPwXe-Wvd9Cc {
+ color: var(--color-1);
+}
+
+.tLDEHd-Wvd9Cc {
+ color: var(--color-2);
+}
+
+.uhdmkb {
+ background: var(--none);
+}
+
+.IzVHde {
+ background: var(--background-2);
+}
+
+.YPA3Vb-vQzf8d {
+ color: var(--color-2) !important;
+}
+
+.aHij0b-WsjYwc {
+ background: var(--background-2);
+ border: none;
+}
+
+.U0QIdc, .U0QIdc:visited {
+ color: var(--color-1);
+}
+
+.slDfNd, .slDfNd:visited {
+ color: var(--color-3);
+}
+
+.KIdaEf {
+ border: none;
+}
+
+.CHJgKd {
+ margin: 10px 0;
+ text-align: center;
+}
+
+button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-Bz112c-M1Soyc.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.UywwFc-kSE8rc-FoKg4d-sLO9V-YoZ4jf.Utoz9b {
+ background: var(--background-3);
+}
+
+.SUV7We {
+ border: none;
+}
+
+.UywwFc-kBDsod-Rtc0Jf,
+.UywwFc-vQzf8d {
+ color: var(--color-2) !important;
+}
+
+.xo7QFd,
+.xo7QFd:focus-within,
+.wBE4bf {
+ user-select: none;
+ transition: background 70ms linear;
+ background: var(--background-2) !important;
+}
+
+.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:hover,
+.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:active,
+.qhnNic.i8Wprc.wBE4bf.TIunU.xo7QFd:focus-within {
+ background: var(--background-3) !important;
+}
+
+.s2g3Xd, .RcHwO {
+ border: none !important;
+}
+
+.pco8Kc, .tWeh6, .uOvjqf, .qoXqmb {
+ color: var(--color-2);
+}
+
+.uOvjqf {
+ font-weight: 600;
+}
+
+.AeBiU-kBDsod-Rtc0Jf {
+ color: var(--color-2) !important;
+}
+
+.u73Apc, .O9YpHb, .VDj5V, .UB57l .VfPpkd-k2Wrsb, .VfPpkd-Sx9Kwc.VfPpkd-Sx9Kwc-OWXEXe-s2gQvd .VfPpkd-k2Wrsb, .VfPpkd-T0kwCb {
+ border: none !important;
+}
+
+.d6CWTd,
+.ycbm1d,
+.vZimUe {
+ border-color: var(--border-color);
+}
+
+.ii7kld:not(.xp2dJ) {
+ border-radius: .75rem .75rem 4px 4px !important;
+ transition: background 70ms linear;
+}
+
+/* .ii7kld:not(.xp2dJ):has(> :first-child:focus) {
+ border-radius: 8px 8px 0 0 !important;
+} */
+
+.ii7kld:not(.xp2dJ):focus,
+.ii7kld:not(.xp2dJ):active,
+.ii7kld:not(.xp2dJ):hover {
+ background: var(--background-2);
+}
+
+.ii7kld:not(.xp2dJ):focus-within {
+ background: var(--background-2);
+}
+
+.OlXwxf .UW3s6d {
+ max-height: none;
+}
+
+.lXuxY .u73Apc, .pO6AMc .u73Apc, .PqkECe .u73Apc, .S9CVKb, .UW3s6d {
+ background: var(--background-2) !important;
+}
+
+.S9CVKb {
+ margin-top: -2px;
+}
+
+.QUEiXc, .ZnNi8e .u7S8tc, .Ea4RVb {
+ color: var(--color-2);
+}
+
+.kByKEb {
+ user-select: none;
+}
+
+.bqKF7d.Y62e3e.QUEiXc.j70YMc b,
+.pco8Kc b {
+ font-weight: 400;
+}
+
+.xDBFpb.ynt9Dc.DO87D {
+ border: none !important;
+ border-radius: 16px 0 0 16px;
+ background: var(--background-2);
+}
+
+.Aitr4c {
+ justify-content: center;
+ color: var(--color-2);
+}
+
+.LXTxRc-AznF2e-ZMv3u.LXTxRc-AznF2e-ZMv3u {
+ border: none !important;
+}
+
+.LXTxRc-AznF2e-uDEFge .LXTxRc-AznF2e-wEcVzc-OWXEXe-NowJzb {
+ border-color: var(--color-2) !important;
+}
+
+.LXTxRc-AznF2e-LUERP-bN97Pc {
+ user-select: none;
+}
+
+/* -- Повідомлення --*/
+
+.q1Kmyc {
+ border: none;
+ border-radius: 15px !important;
+ background: var(--background-3);
+}
+
+.xVPuB .snByac, .vnnr5e .snByac {
+ color: var(--color-4);
+}
+
+.hj99tb {
+ color: var(--color-2);
+}
+
+.pPgY8b.xVPuB .KRoqRc, .pPgY8b.vnnr5e .KRoqRc {
+ font-size: 15px;
+}
+
+.xVPuB .Aworge, .vnnr5e .Aworge, .XpxsVb .Aworge {
+ color: var(--color-2) !important;
+}
+
+.umNowf.iYBKud {
+ margin-right: 4px;
+}
+
+.EN2Rfc:not(.RDPZE) .XTO5bf.y7OZL {
+ border-radius: 50%;
+ background: var(--button-active);
+}
+
+.EN2Rfc:not(.RDPZE) .XTO5bf:hover {
+ background: var(--button-hover);
+}
+
+.vqwr2c-W0vJo-fmcmS {
+ color: var(--color-2) !important;
+}
+
+.cC1eCc .VfPpkd-k2Wrsb {
+ color: var(--color-1);
+}
+
+.Fgl6fe-fmcmS-yrriRe-OWXEXe-MFS4be:not(.Fgl6fe-fmcmS-yrriRe-OWXEXe-OWB6Me) {
+ background: var(--background-3) !important;
+}
+
+button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.UywwFc-kSE8rc-FoKg4d-sLO9V-YoZ4jf.ZQXs7e.k7RUf {
+ background: var(--none);
+}
+
+.pYTkkf-Bz112c-LgbsSe:disabled {
+ opacity: .4;
+}
+
+.Epqnjf {
+ margin: .5rem;
+}
+
+.pvb7Pc {
+ border: none;
+}
+
+.vnnr5e .I9OJHe, .vnnr5e .CIy9F {
+ background: var(--background-2) !important;
+}
+
+.jWOS7-Bz112c-LgbsSe {
+ color: var(--color-2) !important;
+}
+
+.Ou5fBb.snByac {
+ color: var(--color-3) !important;
+}
+
+.jWOS7-Bz112c-LgbsSe::before {
+ border: none !important;
+}
+
+/* ---------- Переглянути профіль, виконаних завдань "Сторінка" ---------- */
+
+.FKt3yf {
+ color: var(--color-1);
+}
+
+.huI6Cb {
+ gap: 3px;
+ color: var(--color-2);
+}
+
+.i1wJG {
+ border-color: var(--color-3);
+}
+
+.AeBiU-LgbsSe {
+ border: none !important;
+}
+
+.dA2hVd-NLUYnc-xRPttf-OhKo9c, .dA2hVd-NLUYnc-xRPttf-DbgRPb, .dA2hVd-NLUYnc-xRPttf-NLUYnc {
+ color: var(--color-3) !important;
+}
+
+/* ---------- Завдання "Сторінка" ---------- */
+
+.EE538 {
+ max-width: 50rem;
+}
+
+.fJ1Vac {
+ padding: 1.25rem 4rem 1.5rem 2rem;
+}
+
+@media (max-width: 642px) {
+.fJ1Vac {
+ padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+}}
+
+.GWZ7yf {
+ box-shadow: none;
+ background: var(--background-2);
+}
+
+.z3vRcc {
+ color: var(--color-2) !important;
+}
+
+.nl5VRd {
+ border-bottom: 1px solid var(--border-color);
+}
+
+.ar1wE .eqqrO, .ySjuvd .eqqrO {
+ border-top: 1px solid var(--border-color);
+}
+
+.oh9CFb {
+ padding: 0 .1rem 1rem 1rem;
+}
+
+.EE538 b {
+ font-weight: 400;
+}
+
+.qoXqmb {
+ font-size: .95rem;
+}
+
+.dnobx {
+ color: var(--r);
+}
+
+.oPfDcb {
+ color: var(--g);
+}
+
+button.AeBiU-LgbsSe.AeBiU-LgbsSe-OWXEXe-dgl2Hf.AeBiU-kSE8rc-FoKg4d-sLO9V-YoZ4jf.upBbve {
+ background: var(--background-3);
+}
+
+button.AeBiU-LgbsSe.AeBiU-LgbsSe-OWXEXe-Bz112c-M1Soyc.AeBiU-LgbsSe-OWXEXe-dgl2Hf.AeBiU-kSE8rc-FoKg4d-sLO9V-YoZ4jf.eVOdue {
+ border: none !important;
+ background: var(--background-3);
+}
+
+button.UywwFc-LgbsSe.UywwFc-LgbsSe-OWXEXe-dgl2Hf.UywwFc-StrnGf-YYd4I-VtOx3e.UywwFc-kSE8rc-FoKg4d-sLO9V-YoZ4jf.upBbve {
+ background: var(--background-3);
+}
+
+button.FOBRw-LgbsSe.FOBRw-LgbsSe-OWXEXe-Bz112c-M1Soyc.FOBRw-LgbsSe-OWXEXe-dgl2Hf.FOBRw-LgbsSe-OWXEXe-zcdHbf.FOBRw-StrnGf-YYd4I-VtOx3e.FOBRw-kSE8rc-FoKg4d-sLO9V-YoZ4jf.mG9PAb {
+ background: var(--background-3);
+}
+
+.FOBRw-vQzf8d {
+ color: var(--color-2) !important;
+}
+
+.G5NPvd {
+ color: var(--color-1);
+}
+
+.FGKRlc, .VcNzjd {
+ color: var(--color-2);
+}
+
+.cC1eCc .VfPpkd-cnG4Wd {
+ color: var(--color-2);
+}
+
+.wLJ3Jc {
+ border: none;
+}
+
+.aqdrmf-rymPhb-KkROqb:has(.aqdrmf-rymPhb-Abojl), .dDKhVc-Wvd9Cc {
+ color: var(--color-2) !important;
+}
+
+.HM4nYe {
+ width: auto;
+}
+
+/* -- Завдання прикріпленими викладачами / користувачем -- */
+
+.FHXi2c {
+ background: var(--file);
+}
+
+.FHXi2c:hover,
+.FHXi2c:active,
+.FHXi2c:focus-within {
+ background: var(--file-hover);
+}
+
+.JkIgWb, .vwNuXe.QRiHXd {
+ padding-right: 10px;
+ user-select: none;
+ display: flex;
+ flex-direction: row-reverse;
+}
+
+.F4mChd .ZgfM9 {
+ top: 0;
+ right: 0;
+ bottom: 0;
+ padding: 0 6px;
+ gap: 0;
+ opacity: 0;
+ visibility: hidden;
+ position: absolute;
+ border-radius: 4px 11px 11px 4px;
+ backdrop-filter: blur(2px);
+ transition: opacity .08s linear, visibility .08s linear;
+}
+
+.F4mChd:hover .ZgfM9,
+.F4mChd:focus-within .ZgfM9 {
+ opacity: 1;
+ visibility: visible;
+}
+
+.Niache {
+ margin: 0 !important;
+ border: none !important;
+}
+
+.MM30Lb {
+ padding-left: .8rem; 
+}
+
+.QDKOcc {
+ color: var(--color-2) !important;
+ text-decoration: none !important;
+}
+
+.bHOAdb {
+ height: 4rem;
+ width: auto;
+ min-width: 4.8rem;
+ max-width: 6.5rem;
+ border-radius: 4px;
+}
+
+.bHOAdb img, .bHOAdb .mXQw7d {
+ height: 100%;
+}
+
+.yb5d6c-xJ5Hnf {
+ background: var(--b);
+}
+
+.SZbyC.SSPGKf {
+ background: var(--b);
+}
+
+.lGIiYb {
+ height: 0;
+ min-height: 0;
+ border: none !important;
+ display: flex;
+ position: relative;
+ justify-content: flex-end;
+ background: var(--none);
+}
+
+.AUkUec {
+ top: 10px;
+ right: 10px;
+ height: 40px;
+ width: 40px;
+ padding: 0;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin: 0;
+ position: absolute;
+ border-radius: 50%;
+ color: var(--color-2);
+ background: rgb(20, 20, 22);
+}
+
+/* ---------- Блоки - оверлеи - дайлоги ---------- */
+
+/* -- Приєднання до курсу -- */
+
+.uW2Fw-P5QLlc, .K4vxLd-WsjYwc {
+ background: var(--background-2);
+}
+
+.PPOsde {
+ color: var(--color-1);
+}
+
+.n0c6Ke {
+ color: var(--color-2);
+}
+
+.aqdrmf-rymPhb-Gtdoyb .aqdrmf-rymPhb-fpDzbe-fmcmS {
+ color: var(--color-2) !important;
+}
+
+.aqdrmf-rymPhb-Gtdoyb .aqdrmf-rymPhb-L8ivfd-fmcmS {
+ color: var(--color-3) !important;
+ opacity: 1;
+}
+
+.qdOxv-fmcmS-yrriRe-OWXEXe-UJflGc {
+ --gm3-notched-outline-border-color: var(--color-3) !important;
+}
+
+/* -- Створення курсу -- */
+
+.uW2Fw-P5QLlc {
+ background: var(--background-2);
+}
+
+span.uW2Fw-k2Wrsb-fmcmS {
+ color: var(--color-1);
+}
+
+.UtYN2b {
+ color: var(--color-2);
+}
+
+/* -- Здача роботи -- */
+
+.cC1eCc .VfPpkd-P5QLlc {
+ box-shadow: none;
+ background: var(--background-2);
+}
+
+.qyKend {
+ color: var(--color-1);
+}
+
+.qj5L0 {
+ border-color: var(--color-3);
+ color: var(--color-2);
+}
+
+a.vwNuXe.JkIgWb.J9GwTe.yixX5e {
+ display: flex;
+ flex-direction: row;
+}
+
+/* ---------- Створення завдання "сторінка" ---------- */
+
+.ZoO8hd,
+.LQzn7d .e0prFf {
+ color: var(--color-1);
+}
+
+.MuGjgf,
+.G8Nnu,
+.FMzRdf,
+.tl5cWb,
+.iLjzDc {
+ color: var(--color-2);
+}
+
+.RMrItf,
+.Kqfayb {
+ color: var(--color-3);
+}
+
+.oOPNbc-vQzf8d {
+ color: var(--color-2) !important;
+}
+
+button.oOPNbc-LgbsSe.oOPNbc-LgbsSe-OWXEXe-Bz112c-M1Soyc.oOPNbc-LgbsSe-OWXEXe-dgl2Hf.oOPNbc-kSE8rc-FoKg4d-sLO9V-YoZ4jf.nmr34b {
+ border: none !important;
+}
+
+.UvHKof .bFjUmb-Ysl7Fe {
+ background: var(--background-2);
+}
+
+.MJeJce {
+ background: var(--background-1);
+}
+
+.hja3X.TdC1bb {
+ background: var(--background-1);
+}
+
+.PVm5Od {
+ color: var(--color-2);
+}
+
+.kCyxtd.RDPZE .j1BhHb {
+ color: var(--color-2);
+}
+
+.y2d25,
+.Ir4gPe-h0T7hb-xl07Ob-XxIAqe {
+ background: var(--background-3) !important;
+}
+
+.ECK80e {
+ border: none;
+}
+
+.s7bwNb {
+ color: var(--color-2);
+}
+
+.yLfx3d {
+ border-radius: 0 !important;
+}
+
+.yLfx3d:focus-visible,
+.rHGeGc-OkbHre-Woal0c-RWgCYc:focus-visible {
+ background: var(--button-active);
+}
+
+.D3rBe {
+ background: var(--background-1);
+}
+
+.hja3X {
+ border: none;
+}
+
+.Fgl6fe-fmcmS-wGMbrd {
+ color: var(--color-2) !important;
+}
+
+.BLJgTb-JZnCve-gmhCAd {
+ color: var(--color-2) !important;
+}
+
+.MknZlb {
+ color: var(--color-2)
+}
+
+.LQzn7d .XpCIle {
+ background: var(--background-3);
+}
+
+/* --- Виставлення оцінок "Сторінка" ---*/
+
+.nk37z {
+ color: var(--color-1);
+}
+
+.CHXfbe {
+ color: var(--color-2);
+}
+
+.IMvYId, .IMvYId:visited {
+ color: var(--color-2);
+}
+
+.JlndIc {
+ color: var(--color-2) !important;
+}
+
+.cL8LOd {
+ color: var(--color-2);
+ border-color: var(--color-2);
+}
+
+.Evt7cb, .Evt7cb:visited {
+ color: var(--color-2);
+}
+
+.YrFhrf {
+ color: var(--color-2) !important;
+}
+
+.DC55n td {
+ border: none !important;
+ background: var(--background-2) !important;
+}
+
+.hYt5f.EfvGO .WkZsyc {
+ background: var(--background-3);
+}
+
+.aSjeL.aSjeL td {
+ background: var(--none);
+}
+
+
+.TJtJXb:hover td, .tYQn5c:hover td, .DC55n:hover td {
+ background: var(--background-3) !important;
+}
+
+.WkZsyc .J33wTc {
+ color: var(--color-2);
+}
+
+.XLVGDd {
+ color: var(--color-2);
+}
+
+.TAjiIf a {
+ color: var(--color-2);
+}
+
+.ybOdnf .oJeWuf {
+ color: var(--color-2);
+}
+
+.ybOdnf .eU809d {
+ border-color: var(--color-2) transparent;
+}
+
+.ncFHed {
+ background: var(--background-3);
+}
+
+.ncFHed .MocG8c.KKjvXb {
+ background: var(--background-4);
+}
+
+/* ---------- Запросити користувачів ---------- */
+
+.t1IGPc, .pIQtMd, .DwOGue input, .i2lRwe {
+ background: var(--background-2);
+}
+
+.AZW99 {
+ border-radius: 16px;
+ background: var(--none) !important;
+ transition: background .1s linear;
+}
+
+.AZW99:hover {
+ background: var(--background-3) !important;
+}
+
+.PNwDub {
+ color: var(--color-2);
+}
+
+.G1zVib {
+ color: var(--color-3);
+}
+
+.bNkTzb {
+ border: none;
+}
+
+.TCFlue, .c1x9qf {
+ background: var(--none);
+}
+
+.ATUW8c {
+ border: none !important;
+ background: var(--background-3);
+}
+
+.ATUW8c:hover {
+ background: var(--background-5) !important;
+}
+
+.nPFlsd {
+ color: var(--color-2);
+}
+
+.VeZ7x {
+ fill: var(--color-2) !important;
+}
+
+/* ---------- Все остальне ---------- */
+
+.A6dC2c, .d9vgmb {
+ color: var(--color-2);
+}
+
+.JZk9qf {
+ color: var(--color-3);
+}
+
+.dTReKe {
+ column-gap: 1rem;
+}
+
+.SjSSYd {
+ border: none !important;
+}
+
+button.pYTkkf-Bz112c-LgbsSe.KqyCxc, button.pYTkkf-Bz112c-LgbsSe.j1ClDb.QqCXne {
+ background: var(--background-3);
+}
+
+.PbRsyc:not(:empty) {
+ background: var(--background-2);
+ border-radius: 15px;
+}
+
+.yPtghd {
+ color: var(--color-1);
+}
+
+.r2ZjL-O1htCb .rHGeGc-TkwUic { 
+ background: var(--background-2) !important;
+}}
