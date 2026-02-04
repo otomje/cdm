@@ -9,16 +9,12 @@ A stylish, minimalist dark theme for **Google Classroom**.
 
 3. Done! You can now use it.
 
-## Update v4.3.6!
+## Update v4.4.0!
 
 What's new?
 
-1. Updated the “Delete File” button.
+1. All colors have been updated for a more comfortable viewing experience.
 
-2. Fixed visual artifacts.
-
-3. Added and updated some colors.
-
-4. Mini-fixes.
+2. Minor bugs have been fixed and new features have been added.
 
 My style will be updated until June 1, 2026. What happens after that will be decided later :)
